@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/airbnb");
+const MONGO_URL = "mongodb+srv://aakarshsahu:Aakarsh@#$1437@cluster0.wapzcve.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(MONGO_URL , { useNewUrlParser: true });
 
 
 const userSchema = mongoose.Schema({
