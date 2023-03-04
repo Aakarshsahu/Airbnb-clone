@@ -1,11 +1,14 @@
 const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
-const MONGO_URL = "mongodb+srv://aakarshsahu:Aakarsh@#$1437@cluster0.wapzcve.mongodb.net/?retryWrites=true&w=majority"
-try {
-  await mongoose.connect(MONGO_URL, { useNewUrlParser: true });
-} catch (error) {
-  console.error(error);
+const MONGO_URL = "mongodb+srv://aakarshsahu:1JLSZmpX4up8vMr5@cluster0.erurd0k.mongodb.net/?retryWrites=true&w=majority";
+async function connetion(){
+  try {
+    await mongoose.connect(MONGO_URL , {useNewUrlParser:true , useUnifiedTopology: true });
+  } catch (error) {
+    console.error(error);
+  }
 }
+connetion();
 
 
 const userSchema = mongoose.Schema({
